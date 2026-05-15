@@ -1,0 +1,191 @@
+# Site Settings
+title: "Ryan Nash | Data Analytics Portfolio"
+email: "rnash1003@gmail.com"
+description: >-
+  Data Analytics graduate focused on predictive modeling,
+  dashboard development, machine learning, and operational insights
+  using R, Python, SQL, Power BI, and Tableau.
+
+baseurl: ""
+url: "https://rnash1003.github.io"
+
+# Personal Info
+author:
+  name: "Ryan Nash"
+  location: "North Carolina / NYC"
+  bio: "Data Analytics Graduate • Predictive Modeling • Business Intelligence"
+  github: "rnash1003"
+  linkedin: "ryan-nash"
+  email: "rnash1003@gmail.com"
+
+# Theme
+theme: minima
+
+# ================================
+# Where Things Are
+# ================================
+
+source              : .
+destination         : ./_site
+collections_dir     : .
+plugins_dir         : _plugins
+layouts_dir         : _layouts
+data_dir            : _data
+includes_dir        : _includes
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+  posts:
+    output: true
+
+# ================================
+# Handling Reading
+# ================================
+
+safe                : false
+include             : [".htaccess", "_pages"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - README.md
+
+keep_files          : [".git", ".svn"]
+
+encoding            : "utf-8"
+markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter : false
+
+# ================================
+# Filtering Content
+# ================================
+
+show_drafts         : false
+limit_posts         : 0
+future              : false
+unpublished         : false
+
+# ================================
+# Plugins
+# ================================
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+whitelist: []
+
+# ================================
+# Conversion
+# ================================
+
+markdown            : kramdown
+highlighter         : rouge
+lsi                 : false
+excerpt_separator   : "\n\n"
+incremental         : false
+
+# ================================
+# Serving
+# ================================
+
+detach              : false
+port                : 4000
+host                : 127.0.0.1
+baseurl             : ""
+show_dir_listing    : false
+
+# ================================
+# Outputting
+# ================================
+
+permalink           : pretty
+paginate_path       : /page:num
+timezone            : America/New_York
+
+quiet               : false
+verbose             : false
+defaults:
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# ================================
+# Liquid
+# ================================
+
+liquid:
+  error_mode        : warn
+  strict_filters    : false
+  strict_variables  : false
+
+# ================================
+# Markdown Processors
+# ================================
+
+kramdown:
+  auto_ids          : true
+  entity_output     : as_char
+  toc_levels        : [1,2,3,4,5,6]
+  smart_quotes      : lsquo,rsquo,ldquo,rdquo
+  input             : GFM
+  hard_wrap         : false
+  footnote_nr       : 1
+  show_warnings     : false
+
+# ================================
+# Social Links
+# ================================
+
+github_username: rnash1003
+
+social_links:
+  github: rnash1003
+  linkedin: ryan-nash
+
+# ================================
+# Portfolio Sections
+# ================================
+
+skills:
+  - R
+  - Python
+  - SQL
+  - Power BI
+  - Tableau
+  - Excel
+  - Machine Learning
+  - Data Visualization
+
+featured_projects:
+  - Fine Dining Reservation Analytics
+  - Workplace Safety Incident Prediction
+  - NHL Analytics & Game Prediction
+  - Data Visualization Portfolio
+
+# ================================
+# Emoji + Theme Settings
+# ================================
+
+emoji: true
+show_downloads: false
+toc: true
